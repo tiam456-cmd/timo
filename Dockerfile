@@ -18,9 +18,9 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy requirement file and install dependencies
-COPY requirments.txt .
+COPY requirements.txt .
 RUN pip install --upgrade pip setuptools wheel
-RUN pip install -r requirments.txt
+RUN pip install -r requirements.txt
 
 # Copy project files into the container
 COPY . .
