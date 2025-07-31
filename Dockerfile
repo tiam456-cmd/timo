@@ -8,13 +8,13 @@ ENV DISPLAY=:99
 # Install system packages needed for GUI-based Python packages and build dependencies
 RUN apt-get update && apt-get install -y \
     xvfb \
+    procps \
     libxrender1 libxext6 libsm6 libx11-6 \
     gcc \
     python3-dev \
     libevdev-dev \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
-
 # Set working directory
 WORKDIR /app
 
